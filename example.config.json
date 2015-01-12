@@ -24,7 +24,7 @@
       "maximum_elements": "50000"
     },
     "timeout": {
-      "seconds": "300"
+      "seconds": "45"
     },
     "status": {
       "database": "online",
