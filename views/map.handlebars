@@ -4,12 +4,28 @@
     div: 'map',
     hooks: {
       init: function(callback) {
+        var center;
         var overlay = L.npmap.layer.geojson({
           data: {{{geojson}}}
         }).addTo(NPMap.config.L);
         NPMap.config.L.fitBounds(overlay.getBounds());
         for (var layer in overlay._layers) {
-          overlay._layers[layer]._fireMouseEvent({'type': 'click'});
+          if (overlay._layers[layer]._latlngs) {
+            // Line or polygon
+            center = {lat: 0, lng: 0};
+            for (var i = 0; i<overlay._layers[layer]._latlngs.length; i++) {
+              center.lat += overlay._layers[layer]._latlngs[i].lat;
+              center.lng += overlay._layers[layer]._latlngs[i].lng;
+            }
+            if (overlay._layers[layer]._latlngs.length>0) {
+              center.lat = center.lat / overlay._layers[layer]._latlngs.length;
+              center.lng = center.lng / overlay._layers[layer]._latlngs.length;
+            } else {
+              center = overlay._layers[layer]._latlng;
+            }
+          }
+          overlay._layers[layer].fire('click', (center ? {'latlng': {'wrap': function(){return center;}}} : center));
+          break;
         }
         callback();
       }
@@ -17,7 +33,7 @@
   };
 (function(){
  var s = document.createElement('script');
- s.src = 'http://www.nps.gov/npmap/npmap.js/2.0.0/npmap-bootstrap.min.js';
+ s.src = 'http://www.nps.gov/npmap/npmap.js/2.0.0/npmap-bootstrap.js';
  document.body.appendChild(s);
 })();
 </script>
