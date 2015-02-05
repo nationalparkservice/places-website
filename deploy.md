@@ -40,3 +40,7 @@ To get around this run the command:
     * filelog-info.log
     * filelog-error.log
     * filelog-debug.log
+
+If you're interested in watching the live stream of console.logs from the application, run the following command (use ctrl-c to stop it):
+
+```tail -f /var/log/places-website.log```
