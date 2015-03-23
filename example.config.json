@@ -42,7 +42,7 @@
   "iD": {
     "settings": {
       "connection": {
-        "api": "ADDRESS FOR YOU SERVER",
+        "api": "ADDRESS FOR YOUR SERVER"
       },
       "editing": {
         "area": true,
@@ -58,7 +58,7 @@
       "locationOverlayMaxZoom": 22,
       "map": {
         "center": [-77.0228, 38.8944],
-        "defaultBackground": "Esri",
+        "defaultBackground": "bing-imagery",
         "zoom": 15.01
       },
       "tags": {
