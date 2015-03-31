@@ -1,3 +1,6 @@
 node_modules
 config.json
 npm-debug.log
+filelog-debug.log
+filelog-error.log
+filelog-info.log

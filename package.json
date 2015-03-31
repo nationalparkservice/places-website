@@ -22,7 +22,7 @@
   "dependencies": {
     "express": "4.x",
     "express-handlebars": "1.1.0",
-    "places": "git+https://github.com/nationalparkservice/places.git#buildings",
-    "places-api": "git+https://github.com/nationalparkservice/places-api.git#places-api"
+    "places-editor": "git+https://github.com/nationalparkservice/places-editor.git#master",
+    "places-api": "git+https://github.com/nationalparkservice/places-api.git#master"
   }
 }

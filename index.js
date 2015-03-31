@@ -49,8 +49,9 @@ var createWebsite = function(port) {
   app.use('/oauth', placesApi.oauth());
 
   // iD Editor
-  app.use(express.static(path.join(__dirname, '/node_modules/places/places')));
-  app.use('/dist', express.static(path.join(__dirname, '/node_modules/places/dist')));
+  app.use(express.static(path.join(__dirname, '/node_modules/places-editor/places')));
+  app.use('/dist', express.static(path.join(__dirname, '/node_modules/places-editor/dist')));
+  app.use('/places', express.static(path.join(__dirname, '/node_modules/places-editor/places')));
 
   // Forward the browse requests
   app.get('/:type(browse|node|relation|way|changeset)/*', function(req, res) {

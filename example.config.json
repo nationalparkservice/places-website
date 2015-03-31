@@ -24,7 +24,7 @@
       "maximum_elements": "50000"
     },
     "timeout": {
-      "seconds": "300"
+      "seconds": "5"
     },
     "status": {
       "database": "online",
@@ -33,24 +33,62 @@
     }
   },
   "database": {
-    "username": "USERNAME",
-    "password": "PASSWORD",
-    "address": "ADDRESS",
+    "username": "postgres",
+    "password": "postgres",
+    "address": "localhost",
     "api": "poi_api",
     "pgs": "poi_pgs"
   },
+  "iD": {
+    "settings": {
+      "connection": {
+        "api": "ADDRESS FOR YOUR SERVER"
+      },
+      "editing": {
+        "area": true,
+        "disabledFields": [
+          "nps:places_uuid",
+          "nps:building_id",
+          "nps:fcat"
+        ],
+        "line": false,
+        "minZoom": 15,
+        "point": true
+      },
+      "locationOverlayMaxZoom": 22,
+      "map": {
+        "center": [-77.0228, 38.8944],
+        "defaultBackground": "bing-imagery",
+        "zoom": 15.01
+      },
+      "tags": {
+        "disabledFields": [
+          "nps:building_id",
+          "nps:fcat",
+          "nps:places_id"
+        ],
+        "uninterestingFields": [
+          "attribution",
+          "created_by",
+          "nps:unit_code",
+          "odbl",
+          "source"
+        ]
+      }
+    }
+  },
   "oauth": {
-    "consumerKey": "CONSUMER_KEY",
-    "consumerSecret": "CONSUMER_SECRET",
+    "consumerKey": "consumerKey",
+    "consumerSecret": "consumerSecret",
     "external": false,
     "local": {
       "auth": "/account/logon/",
-      "server": "AD Server" 
+      "server": "insidemaps.nps.gov"
     },
     "server": "www.openstreetmap.org"
   },
   "website": {
     "debug": true,
-    "port": 3000
+    "port": 80
   }
 }
