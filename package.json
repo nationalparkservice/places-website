@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "express": "4.x",
-    "express-handlebars": "1.1.0",
+    "express-handlebars": "2.0.1",
     "places-editor": "git+https://github.com/nationalparkservice/places-editor.git#master",
     "places-api": "git+https://github.com/nationalparkservice/places-api.git#master"
   }
