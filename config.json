@@ -79,9 +79,9 @@
   },
   "oauth": {
     "keys": [{
-      "name": "default",
-      "consumerKey": "{{secrets.oauth.default.consumerKey}}",
-      "consumerSecret": "{{secrets.oauth.default.consumerSecret}}"
+      "name": "iD",
+      "consumerKey": "{{secrets.oauth.iD.consumerKey}}",
+      "consumerSecret": "{{secrets.oauth.iD.consumerSecret}}"
     }, {
       "name": "arc2places",
       "consumerKey": "{{secrets.oauth.arc2places.consumerKey}}",
