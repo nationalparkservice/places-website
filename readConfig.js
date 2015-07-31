@@ -4,7 +4,7 @@ var fs = require('fs');
 var rep = {
   env: process.env,
   secrets: function (input) {
-    return JSON.parse(fs.readFileSync(process.env.PWD + '/secrets/' + input[0] + '.json', 'utf8'));
+    return JSON.parse(fs.readFileSync(__dirname + '/secrets/' + input[0] + '.json', 'utf8'));
   }
 };
 
