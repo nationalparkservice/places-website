@@ -1,0 +1,105 @@
+{
+  "appInfo": {
+    "version": "0.6",
+    "name": "NPS places-api",
+    "license": "http://www.copyright.gov/title17/92chap1.html#105",
+    "copyright": "This project constitutes a work of the United States Government and is not subject to domestic copyright protection under 17 USC Section 105.",
+    "attribution": "http://www.nps.gov"
+  },
+  "capabilities": {
+    "version": {
+      "maximum": "0.6",
+      "minimum": "0.6"
+    },
+    "area": {
+      "maximum": "0.25"
+    },
+    "tracepoints": {
+      "per_page": "5000"
+    },
+    "waynodes": {
+      "maximum": "50000"
+    },
+    "changesets": {
+      "maximum_elements": "50000"
+    },
+    "timeout": {
+      "seconds": "5"
+    },
+    "status": {
+      "database": "online",
+      "api": "online",
+      "gpx": "online"
+    }
+  },
+  "database": {
+    "username": "{{secrets.database.username}}",
+    "password": "{{secrets.database.password}}",
+    "address": "{{secrets.database.address}}",
+    "api": "places_api",
+    "pgs": "places_pgs"
+  },
+  "iD": {
+    "settings": {
+      "connection": {
+        "api": "http://10.147.153.193"
+      },
+      "editing": {
+        "area": true,
+        "disabledFields": [
+          "nps:places_uuid",
+          "nps:building_id",
+          "nps:fcat"
+        ],
+        "line": true,
+        "minZoom": 15.5,
+        "point": true
+      },
+      "locationOverlayMaxZoom": 22,
+      "map": {
+        "center": [-77.0228, 38.8944],
+        "defaultBackground": "Esri",
+        "zoom": 15.01
+      },
+      "tags": {
+        "disabledFields": [
+          "nps:building_id",
+          "nps:fcat",
+          "nps:places_id"
+        ],
+        "uninterestingFields": [
+          "attribution",
+          "created_by",
+          "nps:unit_code",
+          "odbl",
+          "source"
+        ]
+      }
+    }
+  },
+  "oauth": {
+    "keys": [{
+      "name": "default",
+      "consumerKey": "{{secrets.oauth.default.consumerKey}}",
+      "consumerSecret": "{{secrets.oauth.default.consumerSecret}}"
+    }, {
+      "name": "arc2places",
+      "consumerKey": "{{secrets.oauth.arc2places.consumerKey}}",
+      "consumerSecret": "{{secrets.oauth.arc2places.consumerSecret}}"
+    }, {
+      "name": "josm",
+      "consumerKey": "{{secrets.oauth.josm.consumerKey}}",
+      "consumerSecret": "{{secrets.oauth.josm.consumerSecret}}"
+    }],
+    "external": false,
+    "local": {
+      "auth": "/account/logon/",
+      "server": "insidemaps.nps.gov"
+    },
+    "server": "www.openstreetmap.org"
+  },
+  "website": {
+    "debug": true,
+    "port": 8000
+  }
+}
