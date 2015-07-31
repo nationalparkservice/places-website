@@ -22,6 +22,7 @@
   "dependencies": {
     "express": "4.x",
     "express-handlebars": "2.0.1",
+    "fandlebars": "git+https://github.com/jimmyrocks/fandlebars.git#master",
     "places-editor": "git+https://github.com/nationalparkservice/places-editor.git#master",
     "places-api": "git+https://github.com/nationalparkservice/places-api.git#master"
   }
