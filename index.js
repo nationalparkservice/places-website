@@ -1,4 +1,4 @@
-var config = require('./config');
+var config = require('./readConfig')();
 var exphbs = require('express-handlebars');
 var express = require('express');
 var path = require('path');
