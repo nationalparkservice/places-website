@@ -1,5 +1,5 @@
 node_modules
-config.json
+secrets
 npm-debug.log
 filelog-debug.log
 filelog-error.log
