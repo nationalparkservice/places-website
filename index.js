@@ -1,8 +1,8 @@
-var config = require('./config'),
-  exphbs = require('express-handlebars'),
-  express = require('express'),
-  path = require('path'),
-  placesApi = require('places-api')(config);
+var config = require('./config');
+var exphbs = require('express-handlebars');
+var express = require('express');
+var path = require('path');
+var placesApi = require('places-api')(config);
 
 var createWebsite = function (port) {
   var app = express();
