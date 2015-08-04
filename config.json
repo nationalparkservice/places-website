@@ -18,10 +18,10 @@
       "per_page": "5000"
     },
     "waynodes": {
-      "maximum": "50000"
+      "maximum": "500000"
     },
     "changesets": {
-      "maximum_elements": "50000"
+      "maximum_elements": "500000"
     },
     "timeout": {
       "seconds": "5"
@@ -36,8 +36,8 @@
     "username": "{{secrets.database.username}}",
     "password": "{{secrets.database.password}}",
     "address": "{{secrets.database.address}}",
-    "api": "places_api",
-    "pgs": "places_pgs"
+    "api": "dev_places_api",
+    "pgs": "dev_places_pgs"
   },
   "iD": {
     "settings": {
