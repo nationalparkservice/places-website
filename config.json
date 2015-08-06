@@ -46,11 +46,6 @@
       },
       "editing": {
         "area": true,
-        "disabledFields": [
-          "nps:places_uuid",
-          "nps:building_id",
-          "nps:fcat"
-        ],
         "line": true,
         "minZoom": 15.5,
         "point": true
@@ -58,14 +53,18 @@
       "locationOverlayMaxZoom": 22,
       "map": {
         "center": [-77.0228, 38.8944],
-        "defaultBackground": "Esri",
+        "defaultBackground": "mapbox-satellite",
         "zoom": 15.01
       },
       "tags": {
         "disabledFields": [
           "nps:building_id",
           "nps:fcat",
-          "nps:places_id"
+          "nps:feature_id",
+          "nps:geometry_id",
+          "nps:source_system",
+          "nps:source_system_key",
+          "nps:source_system_key_value"
         ],
         "uninterestingFields": [
           "attribution",
