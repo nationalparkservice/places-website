@@ -1,4 +1,3 @@
-var configFile = require('./config');
 var fandlebars = require('fandlebars');
 var fs = require('fs');
 var rep = {
@@ -9,6 +8,7 @@ var rep = {
 };
 
 module.exports = function (config) {
-  config = config || configFile;
-  return fandlebars.obj(configFile, rep);
+  var env = process.env.NODE_ENV || 'Test';
+  config = config || require('./conf' + env.substr(0, 1).toUpperCase() + env.substr(1));
+  return fandlebars.obj(config, rep);
 };
