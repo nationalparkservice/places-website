@@ -22,7 +22,7 @@
     },
     "website": {
       "port": 80,
-      "debugMode": true
+      "debugMode": false
     }
   },
   "test": {
