@@ -36,13 +36,13 @@
     "username": "{{secrets.database.username}}",
     "password": "{{secrets.database.password}}",
     "address": "{{secrets.database.address}}",
-    "api": "test_places_api",
-    "pgs": "test_places_pgs"
+    "api": "{{environment.database.api}}",
+    "pgs": "{{environment.database.pgs}}"
   },
   "iD": {
     "settings": {
       "connection": {
-        "api": "http://10.147.153.193:8000"
+        "api": "{{environment.id.connection}}"
       },
       "editing": {
         "area": true,
@@ -98,7 +98,7 @@
     "server": "www.openstreetmap.org"
   },
   "website": {
-    "debug": true,
-    "port": 8000
+    "debug": "{{environment.website.debugMode}}",
+    "port": "{{environment.website.port}}"
   }
 }

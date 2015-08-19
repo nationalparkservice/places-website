@@ -1,0 +1,41 @@
+{
+  "development": {
+    "database": {
+      "api": "dev_places_api",
+      "pgs": "dev_places_pgs"
+    },
+    "id": {
+      "connection": "http://10.147.153.193:8080"
+    },
+    "website": {
+      "port": 8080,
+      "debugMode": true
+    }
+  },
+  "production": {
+    "database": {
+      "api": "places_api",
+      "pgs": "places_pgs"
+    },
+    "id": {
+      "connection": "http://10.147.153.193"
+    },
+    "website": {
+      "port": 80,
+      "debugMode": true
+    }
+  },
+  "test": {
+    "database": {
+      "api": "test_places_api",
+      "pgs": "test_places_pgs"
+    },
+    "id": {
+      "connection": "http://10.147.153.193:8000"
+    },
+    "website": {
+      "port": 8000,
+      "debugMode": true
+    }
+  }
+}

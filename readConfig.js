@@ -1,14 +1,21 @@
 var fandlebars = require('fandlebars');
 var fs = require('fs');
-var rep = {
+var replace = {
   env: process.env,
   secrets: function (input) {
+    console.log('s__'+input);
     return JSON.parse(fs.readFileSync(__dirname + '/secrets/' + input[0] + '.json', 'utf8'));
+  },
+  environment: function (input) {
+    console.log('i__'+input);
+    return JSON.parse(fs.readFileSync(__dirname + '/environments.json', 'utf8'))[process.env.NODE_ENV || 'development'][input[0]];
   }
 };
 
 module.exports = function (config) {
-  var env = process.env.NODE_ENV || 'Test';
-  config = config || require('./conf' + env.substr(0, 1).toUpperCase() + env.substr(1));
-  return fandlebars.obj(config, rep);
+  config = config || require('./config');
+  return fandlebars.obj(config, replace);
 };
+
+console.log(process.env.NODE_ENV || "dev");
+console.log(JSON.stringify(fandlebars.obj(require('./config'), replace)/*, null, 2*/));
