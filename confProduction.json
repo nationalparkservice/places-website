@@ -36,8 +36,8 @@
     "username": "{{secrets.database.username}}",
     "password": "{{secrets.database.password}}",
     "address": "{{secrets.database.address}}",
-    "api": "dev_places_api",
-    "pgs": "dev_places_pgs"
+    "api": "places_api",
+    "pgs": "places_pgs"
   },
   "iD": {
     "settings": {
@@ -98,7 +98,7 @@
     "server": "www.openstreetmap.org"
   },
   "website": {
-    "debug": true,
-    "port": 8000
+    "debug": false,
+    "port": 80
   }
 }

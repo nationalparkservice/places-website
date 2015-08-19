@@ -36,13 +36,13 @@
     "username": "{{secrets.database.username}}",
     "password": "{{secrets.database.password}}",
     "address": "{{secrets.database.address}}",
-    "api": "dev_places_api",
-    "pgs": "dev_places_pgs"
+    "api": "test_places_api",
+    "pgs": "test_places_pgs"
   },
   "iD": {
     "settings": {
       "connection": {
-        "api": "http://10.147.153.193"
+        "api": "http://10.147.153.193:8000"
       },
       "editing": {
         "area": true,
