@@ -1,3 +1,5 @@
+process.env.NODE_ENV = process.argv[2];
+console.log('Starting in mode: ' + process.env.NODE_ENV);
 var config = require('./readConfig')();
 var exphbs = require('express-handlebars');
 var express = require('express');
