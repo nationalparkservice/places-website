@@ -1,5 +1,5 @@
 node_modules
-secrets
+secrets/*.json
 npm-debug.log
 filelog-debug.log
 filelog-error.log
